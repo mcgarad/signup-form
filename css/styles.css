@@ -3,6 +3,10 @@
     src: url("../assets/fonts/Norse-Bold.otf");
 }
 
+:root {
+    --theme-color-1: #596D48;
+}
+
 body {
     display: flex;
     margin: 0;
@@ -41,7 +45,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: max(20%, 80px);
+    height: max(15%, 80px);
 
     padding: 12px;
     position: relative;
@@ -59,4 +63,82 @@ body {
 #form-container {
     width: 60%;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #F5F5F5;
+}
+
+#form-container>p {
+    margin: 40px 40px;
+}
+
+legend {
+    margin: 0 0 20px 0;
+}
+
+form>div {
+    background-color: white;
+    box-shadow: 0 2px 5px #AAAAAA;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+fieldset div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 10px 0;
+}
+
+fieldset div:last-child {
+    margin-left: 30px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: #404040;
+    padding-left: 2px;
+}
+
+button {
+    color: white;
+    background-color: var(--theme-color-1, green);
+    margin-left: 40px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 60px;
+    margin-top: 30px;
+}
+
+input {
+    border-radius: 5px;
+    height: 1.2rem;
+    border: 1px solid #e5E7EB;
+}
+
+input:focus {
+    border: 1px thin blue;
+    box-shadow: 2px 2px 5px 2px gray;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+#form-container a {
+    text-decoration: none;
+    color: var(--theme-color-1, green);
+    font-weight: 800;
 }
